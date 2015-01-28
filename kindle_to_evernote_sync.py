@@ -13,7 +13,7 @@ try:
 
         title = clipping[0].split('\r\n- ')[0].replace('\r\n','').replace('(alexander.close@gmail.com)','')
         date = clipping[1].split('\r\n')[0]
-        location = clipping[0].split('\r\n- ')[1].replace('\r\n','')
+        location = clipping[0].split('\r\n- ')[1].replace('\r\n','').replace('Your Highlight at location','|')
         text = clipping[1].split('\r\n\r\n')[1]
         note = {'title': title, 'date': date, 'location': location, 'text': text}
         notes.append(note)
@@ -23,7 +23,6 @@ except:
     print 'Unable parse clipping'
 
 # - TODO:
-# - make the text for the "Your Highlight at location 1234-5678 |" smaller or italisized or less noticable
 # - make new notes go to the notebook "Kindle_highlights", for some reason they route to Talks&Articles right now
 # - try to see if content already exists, to avoid duplicate entries in a note (accomplish this with a semaphore file? currently it runs it all and evernote rejects the duplicate entries)
 def MakeEvernoteNote(note):
