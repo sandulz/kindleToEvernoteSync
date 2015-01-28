@@ -17,4 +17,5 @@ New highlights for new kindle books will create an evernote note within the ever
 
 
 Resourses:
+[@vindia](https://github.com/vindia/kindle-2-evernote)
 [this gist](https://gist.github.com/1071682) by jplattel and [this workflow](http://evansims.com/1380/a-perfect-instapaper-sync-for-kindle/) by Evan Sims 
