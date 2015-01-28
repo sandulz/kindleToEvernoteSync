@@ -23,7 +23,7 @@ except:
     print 'Unable parse clipping'
 
 # - TODO:
-# - make new notes go to the notebook "Kindle_highlights", for some reason they route to Talks&Articles right now
+# - new notes are routing to default notebook, currently "Inbox", probably best for now
 # - currently throwing an error but completing task - look into error 
 def MakeEvernoteNote(note):
     cmd = '''
