@@ -24,7 +24,7 @@ except:
 
 # - TODO:
 # - make new notes go to the notebook "Kindle_highlights", for some reason they route to Talks&Articles right now
-# - try to see if content already exists, to avoid duplicate entries in a note (accomplish this with a semaphore file? currently it runs it all and evernote rejects the duplicate entries)
+# - currently throwing an error but completing task - look into error 
 def MakeEvernoteNote(note):
     cmd = '''
     osascript<<END
