@@ -13,3 +13,8 @@ File changes (new highlights) will be added to previously made Evernote notes - 
 
 New highlights for new kindle books will create an evernote note within the evernote notebook "Kindle_Highlights"
 
+
+
+
+Resourses:
+[this gist](https://gist.github.com/1071682) by jplattel and [this workflow](http://evansims.com/1380/a-perfect-instapaper-sync-for-kindle/) by Evan Sims 
