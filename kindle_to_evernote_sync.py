@@ -11,7 +11,7 @@ try:
     for clip in clippings:
         clipping = clip.split('Added on ')
 
-        title = clipping[0].split('\r\n- ')[0].replace('\r\n','')
+        title = clipping[0].split('\r\n- ')[0].replace('\r\n','').replace('(alexander.close@gmail.com)','')
         date = clipping[1].split('\r\n')[0]
         location = clipping[0].split('\r\n- ')[1].replace('\r\n','')
         text = clipping[1].split('\r\n\r\n')[1]
@@ -23,14 +23,14 @@ except:
     print 'Unable parse clipping'
 
 # - TODO:
-# - Remove (alexander.close@gmail.com from book title)
 # - make the text for the "Your Highlight at location 1234-5678 |" smaller or italisized or less noticable
-# - try to see if content already exists, to avoid duplicate entries in a note
+# - make new notes go to the notebook "Kindle_highlights", for some reason they route to Talks&Articles right now
+# - try to see if content already exists, to avoid duplicate entries in a note (accomplish this with a semaphore file? currently it runs it all and evernote rejects the duplicate entries)
 def MakeEvernoteNote(note):
     cmd = '''
     osascript<<END
         tell application "Evernote"
-            set note_title to "''' + unicode(note['title'], errors="ignore") + '''"
+            set note_title to "''' + unicode(note['title'], errors="ignore") +  '''"
             set note_plain_text to "''' + unicode(note['text'].strip(), errors="ignore") + '''"
             set note_full_contents to "''' + unicode(note['location'], errors="ignore") + "\n" + unicode(note['text'], errors="ignore") + "\n" '''"
             set tag_name to "kindle-note"
