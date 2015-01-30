@@ -102,12 +102,10 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>230.500000:44.000000</string>
+				<string>464.000000:44.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -146,7 +144,7 @@ end run</string>
 					<dict>
 						<key>tokenizedValue</key>
 						<array>
-							<string>Are you sure you want to copy your clippings?</string>
+							<string>Are you sure you want to copy your Kindle's clippings to your Dropbox?</string>
 						</array>
 					</dict>
 				</dict>
@@ -170,7 +168,7 @@ end run</string>
 					<key>negativeTitle</key>
 					<string>Cancel</string>
 					<key>questionText</key>
-					<string>Are you sure you want to copy your clippings?</string>
+					<string>Are you sure you want to copy your Kindle's clippings to your Dropbox?</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Ask for Confirmation</string>
@@ -272,12 +270,10 @@ end run</string>
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>230.500000:86.000000</string>
+				<string>464.000000:86.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Confirmation.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -333,7 +329,7 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>cat</string>
+					<string>cp /Volumes/Kindle/documents/My Clippings.txt ~/Users/alexander.close2/Dropbox/kindle</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -443,17 +439,15 @@ end run</string>
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<false/>
+				<true/>
 				<key>location</key>
-				<string>230.500000:128.000000</string>
+				<string>464.000000:269.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -508,8 +502,6 @@ end run</string>
 					<string>OK</string>
 					<key>displayWarning</key>
 					<false/>
-					<key>explanationText</key>
-					<string>All of your highlights will be added to Evernote</string>
 					<key>negativeTitle</key>
 					<string>Cancel</string>
 					<key>questionText</key>
@@ -615,17 +607,15 @@ end run</string>
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<false/>
+				<true/>
 				<key>location</key>
-				<string>230.500000:170.000000</string>
+				<string>464.000000:466.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Confirmation.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -786,48 +776,46 @@ end run</string>
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<false/>
+				<true/>
 				<key>location</key>
-				<string>230.500000:212.000000</string>
+				<string>464.000000:649.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<false/>
+			<true/>
 		</dict>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>08F99786-133D-45BF-9A18-506D5EF7D100</key>
-		<dict>
-			<key>from</key>
-			<string>79FFD96A-8BBC-48B3-BF92-BFD686E8FD43 - 79FFD96A-8BBC-48B3-BF92-BFD686E8FD43</string>
-			<key>to</key>
-			<string>7B990588-29EE-4EB1-8541-622B895D83A5 - 7B990588-29EE-4EB1-8541-622B895D83A5</string>
-		</dict>
-		<key>5E0093E8-E2B5-4BC5-AD7E-C9139D4A2303</key>
-		<dict>
-			<key>from</key>
-			<string>5529560F-6440-4C2B-A298-137EA763D2E3 - 5529560F-6440-4C2B-A298-137EA763D2E3</string>
-			<key>to</key>
-			<string>79FFD96A-8BBC-48B3-BF92-BFD686E8FD43 - 79FFD96A-8BBC-48B3-BF92-BFD686E8FD43</string>
-		</dict>
-		<key>6010FAB6-74C5-409C-8E03-8D76678CAFCC</key>
-		<dict>
-			<key>from</key>
-			<string>EE39F35F-E8B3-431C-9C20-E0168D06A8DE - EE39F35F-E8B3-431C-9C20-E0168D06A8DE</string>
-			<key>to</key>
-			<string>5529560F-6440-4C2B-A298-137EA763D2E3 - 5529560F-6440-4C2B-A298-137EA763D2E3</string>
-		</dict>
-		<key>C766C846-0600-4971-9B26-8044F2677591</key>
+		<key>742EDEFF-0266-4546-9240-C0E23A114596</key>
 		<dict>
 			<key>from</key>
 			<string>7B990588-29EE-4EB1-8541-622B895D83A5 - 7B990588-29EE-4EB1-8541-622B895D83A5</string>
 			<key>to</key>
 			<string>7219FF95-BE89-4433-BE59-BE1E022AD7E6 - 7219FF95-BE89-4433-BE59-BE1E022AD7E6</string>
+		</dict>
+		<key>A632DAE7-BF97-447A-BB7E-CDB01A851723</key>
+		<dict>
+			<key>from</key>
+			<string>79FFD96A-8BBC-48B3-BF92-BFD686E8FD43 - 79FFD96A-8BBC-48B3-BF92-BFD686E8FD43</string>
+			<key>to</key>
+			<string>7B990588-29EE-4EB1-8541-622B895D83A5 - 7B990588-29EE-4EB1-8541-622B895D83A5</string>
+		</dict>
+		<key>B9B72C22-04CC-4D47-9921-125DAE3098A6</key>
+		<dict>
+			<key>from</key>
+			<string>5529560F-6440-4C2B-A298-137EA763D2E3 - 5529560F-6440-4C2B-A298-137EA763D2E3</string>
+			<key>to</key>
+			<string>79FFD96A-8BBC-48B3-BF92-BFD686E8FD43 - 79FFD96A-8BBC-48B3-BF92-BFD686E8FD43</string>
+		</dict>
+		<key>C5863463-A925-41CD-B718-8E56C581CE4F</key>
+		<dict>
+			<key>from</key>
+			<string>EE39F35F-E8B3-431C-9C20-E0168D06A8DE - EE39F35F-E8B3-431C-9C20-E0168D06A8DE</string>
+			<key>to</key>
+			<string>5529560F-6440-4C2B-A298-137EA763D2E3 - 5529560F-6440-4C2B-A298-137EA763D2E3</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>

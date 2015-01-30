@@ -2,7 +2,7 @@ import os
 import time
 
 username = "alexander.close2"
-document = open("/Users/"+username+"/Dropbox/kindle-clippings.txt","r") 
+document = open("/Users/"+username+"/Dropbox/kindle/kindle-clippings.txt","r") 
  
 data = "".join(document.readlines())
 notes = []
@@ -11,9 +11,9 @@ try:
     for clip in clippings:
         clipping = clip.split('Added on ')
 
-        title = clipping[0].split('\r\n- ')[0].replace('\r\n','').replace('(alexander.close@gmail.com)','')
+        title = clipping[0].split('\r\n- ')[0].replace('\r\n','')
         date = clipping[1].split('\r\n')[0]
-        location = clipping[0].split('\r\n- ')[1].replace('\r\n','').replace('Your Highlight at location','|')
+        location = clipping[0].split('\r\n- ')[1].replace('\r\n','')
         text = clipping[1].split('\r\n\r\n')[1]
         note = {'title': title, 'date': date, 'location': location, 'text': text}
         notes.append(note)
