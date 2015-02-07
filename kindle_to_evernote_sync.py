@@ -9,6 +9,11 @@ notes = []
 try:
     clippings = data.split('==========')
     for clip in clippings:
+
+        if "Bookmark" in clip:
+            print 'Skipping bookmark'
+            continue
+
         clipping = clip.split('Added on ')
 
         title = clipping[0].split('\r\n- ')[0].replace('\r\n','')
@@ -23,7 +28,7 @@ except:
     print 'Unable parse clipping'
 
 # - TODO:
-# - new notes are routing to default notebook, currently "Inbox", probably best for now
+# - new notes route to notebook "Inbox" by default, good for review and filing
 # - currently throwing an error but completing task - look into error 
 def MakeEvernoteNote(note):
     cmd = '''
@@ -31,7 +36,7 @@ def MakeEvernoteNote(note):
         tell application "Evernote"
             set note_title to "''' + unicode(note['title'], errors="ignore") +  '''"
             set note_plain_text to "''' + unicode(note['text'].strip(), errors="ignore") + '''"
-            set note_full_contents to "''' + unicode(note['location'], errors="ignore") + "\n" + unicode(note['text'], errors="ignore") + "\n" '''"
+            set note_full_contents to "''' + unicode(note['text'], errors="ignore") + "\n" '''"
             set tag_name to "kindle-note"
             set note_search_term to note_title
             set found_notes to find notes note_search_term
