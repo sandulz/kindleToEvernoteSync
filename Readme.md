@@ -25,6 +25,11 @@ New notes route to notebook "Inbox" by default, to be reviewed and filing into a
 	
 	python kindle_to_evernote_sync.py
 
+###TODO
+1. It's throwing weird errors in the terminal, but works.
+2. It goes through all notes, every time, making it a long/slow process.
+3. If it happens automatically with automator, user doesn't know when it's done or not.
+
 
 Resourses:
 [@vindia](https://github.com/vindia/kindle-2-evernote)
