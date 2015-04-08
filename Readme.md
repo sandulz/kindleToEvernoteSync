@@ -1,19 +1,29 @@
-##How this Program Shall Work
+#kindleToEvernoteSync
 
-User will plug in Kindle Device to Mac
-
-Mac will detect the Kindle and download the file /documents/My Clippings.txt to /Users/"+username+"/Dropbox/kindle-clippings.txt and replace the file
-if one is previously present
-
-Mac will read the file from the dropbox folder and detect any changes
-
-*first search for tags, and search for title - see if the content exists first, to avoid duplicate entries in a book
-
-File changes (new highlights) will be added to previously made Evernote notes - append those notes
-
-New highlights for new kindle books will create an evernote note within the evernote notebook "Kindle_Highlights"
+## Backup Kindle Highlights/Notes & Add to Evernote
 
 
+1) Using Automator, Mac will detect the Kindle has been plugged in and download the file 
+
+	~/documents/My Clippings.txt
+
+to 
+	
+	~/Users/"+username+"/Dropbox/kindle-clippings.txt 
+
+and replace the file if one is already present.
+
+2) kindle_to_evernote_sync.py will run, which copies the files into the users evernote account.
+
+File changes (new highlights) will be added to previously made Evernote notes - appending those notes
+
+New notes route to notebook "Inbox" by default, to be reviewed and filing into any other notebook within Evernote
+
+
+
+###If for some reason the automator file .wflow isn't working, can navagate to the local file and run:
+	
+	python kindle_to_evernote_sync.py
 
 
 Resourses:

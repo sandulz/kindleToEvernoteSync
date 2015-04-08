@@ -2,7 +2,7 @@ import os
 import time
 
 username = "alexander.close2"
-document = open("/Users/"+username+"/Dropbox/kindle/My Clippings.txt","r") 
+document = open("/Users/"+username+"/Dropbox/kindle-clippings.txt","r") 
  
 data = "".join(document.readlines())
 notes = []
