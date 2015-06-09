@@ -2,8 +2,8 @@ import os
 import time
 
 username = "alexander.close2"
-document = open("/Users/"+username+"/Dropbox/kindle-clippings.txt","r") 
- 
+document = open("/Users/"+username+"/Dropbox/kindle-clippings.txt","r")
+
 data = "".join(document.readlines())
 notes = []
 try:
@@ -23,13 +23,13 @@ try:
         note = {'title': title, 'date': date, 'location': location, 'text': text}
         notes.append(note)
         #print note
-    
+
 except:
     print 'Unable parse clipping'
 
 # - TODO:
 # - new notes route to notebook "Inbox" by default, good for review and filing
-# - currently throwing an error but completing task - look into error 
+# - currently throwing an error but completing task - look into error
 def MakeEvernoteNote(note):
     cmd = '''
     osascript<<END
